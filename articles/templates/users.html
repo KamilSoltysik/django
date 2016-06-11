@@ -1,0 +1,17 @@
+{%extends "layout.html" %}
+
+{% block content %}
+<a class="btn btn-success" href="{% url 'user_new' %}">Dodaj użytkownika</a>
+
+   
+						<div class ="user">
+			{% for user in users %}
+				<a href="{% url 'user_detail' pk=user.pk %}">{{ user.name }} </a>
+				
+		
+		<br>
+			{% endfor %}
+			</div>
+
+	  
+{% endblock content %}

@@ -1,0 +1,11 @@
+{%extends "layout.html" %}
+
+
+{% block content %}
+    <h1>Nowy użytkownik</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form }}
+		<br>
+        <button type="submit" class="save btn btn-default">Zapisz</button>
+    </form>
+{% endblock %}

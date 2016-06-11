@@ -1,0 +1,19 @@
+{%extends "layout.html" %}
+{% block content %}
+<div class="post">
+
+            
+			
+				<div class ="user">
+				Pseudonim: {{ user.nickname }} <br>
+				Mail: {{ user.mail }} <br>
+				Imię: {{ user.name }} <br>
+		<a class="btn btn-warning" href="{% url 'user_edit' pk=user.pk%}">Edytuj</a>
+		<a class="btn btn-danger" href="{% url 'user_remove' pk=user.pk %}">Usuń</a>
+			
+			</div><br>
+	
+
+        </div>
+   
+{% endblock %}

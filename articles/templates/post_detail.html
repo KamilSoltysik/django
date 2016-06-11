@@ -1,0 +1,21 @@
+{%extends "layout.html" %}
+{% block content %}
+<div class="post">
+		<a class="btn btn-warning" href="{% url 'post_edit' pk=post.pk %}">Edytuj</a>
+		<a class="btn btn-danger" href="{% url 'post_remove' pk=post.pk %}">Usuń</a>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+			
+						<div class ="user">
+			
+		Autor: {{ post.user}} 
+			</div>
+			            <div class="date">
+						
+              {{ post.published_date }}<br>
+			Tag: {{ post.tag }}
+            </div>
+
+        </div>
+   
+{% endblock %}
